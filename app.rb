@@ -44,7 +44,7 @@ get '/rss' do
   rss.xpath('//item').each do |item|
     description = Nokogiri::XML::Node.new 'description', rss
     link = item.xpath('link').first.content
-    description.content = rss.create_cdata(text(link)[:text])
+    description.content = text(link)[:text]
     item.add_child(description)
   end
   rss.to_xml
