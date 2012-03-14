@@ -3,6 +3,13 @@ RSSPaper
 
 rss -- instapaper --> rss with content
 
+Run
+---
+
+    $ rackup config.ru
+
+and open [http://localhost:9292/](http://localhost:9292/).
+
 Setting up for heroku
 ---------------------
 
